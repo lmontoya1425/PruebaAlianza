@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "3554fb1c-f9be-4579-93f8-b8c27b1ec716",
+		"name": "PruebaAlianza",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getClientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9091/clients/findClients?sharedKey=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"clients",
+						"findClients"
+					],
+					"query": [
+						{
+							"key": "sharedKey",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:9091/clients/createClient",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"sharedKey\":\"ssh\",\r\n\t\"businessId\":\"Lawrence Montoya\",\r\n\t\"email\":\"lmontoya@asesoftware.com\",\r\n\t\"phone\":\"3214536111\",\r\n\t\"dataAdded\":\"2021-05-06\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9091/clients/createClient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9091",
+					"path": [
+						"clients",
+						"createClient"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
